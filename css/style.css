@@ -1,0 +1,340 @@
+/*General CSS*/
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size:9.8pt;
+	background-color:#f7f7f7;
+}
+
+html, body{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+nav{
+	background-color:#fff;
+	padding:12px;
+	border-bottom:1px solid #eee;
+	font-family: 'Oswald', sans-serif;
+	font-size:12pt;
+	color:#000;
+}
+
+div#wrapper{
+	width:70%;
+	margin:0 auto;
+	/* overflow:hidden; Macht die Spalten gleichlang, aus irgendwelchen Gründen, aber der fehlende Scrollbalken verursachte Springen – daher erst mal raus*/
+}
+
+main{
+	background-color:rgba(255,255,255,1);
+	min-height:500px;
+	overflow:hidden; /*Macht die Spalten gleichlang, aus irgendwelchen Gründen*/
+}
+
+#main p{
+	padding-left:27%;
+	padding-right:10%;
+}
+
+main aside{
+	float:left;
+	width:20%;
+	min-height:600px;
+	background-color:#fff;
+}
+
+aside.introduction img{
+	width:75%;
+	height:auto;
+	margin:12.5% 0 5% 12.5%;
+	padding:2%;
+	border:1px solid #E0DADA;
+	box-sizing:border-box;
+}
+
+aside img{
+	width:75%;
+	height:auto;
+	margin:5% 15% 5% 12.5%;
+	padding:2%;
+	border:1px solid #E0DADA;
+	box-sizing:border-box;
+}
+
+aside p{
+	margin:0 14% 10% 14.5%;
+	padding:0;
+}
+
+aside.introduction{
+	border-right:1px solid #E0DADA;
+}
+
+.sidebar{
+	float:right;
+	width:20%;
+	text-align:center;
+	box-sizing:border-box;
+}
+
+.gallery img{
+	display:inline-block;
+	margin: 0 0 1em;
+	width:100%;
+	height:auto;
+}
+
+.gallery .sidetext{
+	padding:20px;
+	display:none;
+}
+
+.gallery{
+	column-count:3;
+	column-gap: 1em;
+	width: 80%;
+	box-sizing:border-box;
+}
+
+.clear{
+	clear:both;
+}
+
+/*Text-Decoration*/
+
+h1 {
+	color:#000;
+	font-family: 'Abril Fatface', cursive;
+	font-weight:normal;
+	font-size:50pt;
+	margin-top:6%;
+	margin-bottom:1.5%;
+	transform: translate(-40%, -30%);
+	line-height:86%;
+	text-align:right;
+}
+
+h1 a:hover{
+	color:rgba(240, 78, 78,1);
+}
+
+.email{
+	padding-top:0.2em;
+}
+
+h2 {
+	color:rgba(240, 78, 78,1);
+	font-family: 'Abril Fatface', cursive;
+	font-weight:normal;
+	margin-left:27%;
+	margin-top:3%;
+	padding-top:0.6em;
+	font-size:28pt;
+}
+
+h3 {
+	font-family: 'Abril Fatface', cursive;
+	font-weight:normal;
+	font-size:20pt;
+}
+
+a{
+	text-decoration:none;
+	font-weight:100;
+	color:#000;
+}
+
+a:hover{
+	color:rgba(240, 78, 78,1);
+}
+
+aside nav:hover{
+	border-bottom:1px solid #f04e4e;
+	color:#f04e4e;
+}
+
+aside nav a{
+	display:block;
+}
+
+nav ul{
+	margin:0;
+	margin-top:3px;
+	margin-bottom:-5px;
+	padding:0;
+	list-style-type:none;
+}
+	
+nav ul li{
+	display:inline;
+}
+
+a.bottomborder{
+	padding:10px;
+	position:relative;
+	bottom:0px;
+}
+
+a.bottomborder:hover{
+	position:relative;
+	bottom:0;
+	border-bottom:1px solid #f04e4e;
+	z-index:1;
+	color:rgba(240, 78, 78,1);
+}
+
+.red{
+	color:rgba(240, 78, 78,1);
+}
+.red:hover{
+	color:#000;
+}
+
+/*Gallery-Overlay*/
+
+.gallery-start{
+	cursor:pointer;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90%;
+  width: 90%;
+  background:rgba(0,0,0,0.8);
+  box-sizing:border-box;
+}
+
+a.close{
+	float:right;
+	cursor:pointer;
+	margin-top:-3px;
+	width:2%;
+	box-sizing:border-box;
+}
+
+figure{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+}
+
+
+div .overlay{
+	margin:0;
+	overflow:auto;
+	padding:2em;
+}
+
+div .overlay img{
+	width:75%;
+	height:auto;
+	box-sizing:border-box;
+}
+
+div figure aside{
+	float:right;
+	width:20%;
+	margin-right:1.5%;
+	box-sizing:border-box;
+	min-height:200px;
+	background-color:#F7F7F7;
+}
+
+/*Font Awesome Icons*/
+
+i.fa.fa-window-close.fa-3x{
+	color:#C1C1C1;
+}
+	
+i.fa.fa-window-close.fa-3x:hover{
+	color:white;
+}
+
+/*Responsive Media-Queries*/
+
+/*Für Browserfenster mit weniger als 1000px Breite*/
+
+@media (max-width:1024px){
+	div figure aside{
+		float:left;
+		width:90%;
+		height:auto;
+		margin-left:0;
+	}
+	
+	div figure img{
+		width:90%;
+		height:auto;
+		margin-left:0;
+		padding-bottom:1em;
+	}
+
+	main aside{
+		float:left;
+		width:100%;
+		box-sizing:border-box;
+		margin-left:0;
+	}
+	
+	#wrapper{
+		width:80%;
+	}
+		
+	main img{
+		float:left;
+		width:100%;
+		height:auto;
+	}
+	
+/*Für Browserfenster mit weniger als 700px Breite*/
+
+@media (max-width:768px){
+	#wrapper{
+		width:100%;
+	}
+	body{
+		font-size:13pt;
+	}
+	
+	section figure img{
+		width:100%;
+		height:auto;
+	}
+	
+	section figure aside{
+		width:100%;
+		margin-left:0;
+	}
+
+	.close-gallery{
+		clear:both;
+	}
+	.close{
+		padding-bottom:1em;
+		padding-right:4%;
+	}
+	
+	h1 {
+	font-size:50pt;
+	}
+
+	h2 {
+	font-size:33pt;
+	}
+}
+
+@media (max-width:540px){
+	h1{
+		font-size:45pt;
+}
+	h2 {
+	font-size:25pt;
+	}
+
+	}
