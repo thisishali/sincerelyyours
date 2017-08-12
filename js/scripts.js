@@ -23,4 +23,7 @@ $(document).ready(function() {
 	$("img").click(function(event) {
 		console.log(event.target);
 	});
+	$(".gallery").ready(function(){
+      $(".gallery-start").fadeIn(1000);
+	});
 })
