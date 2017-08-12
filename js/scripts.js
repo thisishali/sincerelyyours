@@ -18,16 +18,5 @@ $(document).ready(function() {
 	});
 	$("img").click(function(event) {
 		console.log(event.target);
-		
 	});
-	$("img.lazy").scroll(function(sporty) {
-		console.log(sporty.target);
-	});
-    $("img.lazy").lazyload({
-        event : "sporty",
-		effect : "fadeIn"
-    });
-    var timeout = setTimeout(function() {
-        $("img.lazy").trigger("sporty")
-    }, 5000);
 })

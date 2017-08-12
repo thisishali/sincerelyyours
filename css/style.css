@@ -80,7 +80,6 @@ aside.introduction{
 }
 
 .gallery img{
-	display:inline-block;
 	margin: 0 0 1em;
 	width:100%;
 	height:auto;
@@ -135,6 +134,7 @@ h2 {
 }
 
 h3 {
+	margin-left:14.5%;
 	font-family: 'Abril Fatface', cursive;
 	font-weight:normal;
 	font-size:20pt;
